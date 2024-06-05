@@ -1,0 +1,66 @@
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-dd-navbar></app-dd-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
+      <div class="mt-20 mb-20     ">
+          <p class="text-5xl text-2xl font-extrabold  text-blue-600  text-center">
+              LISTADO DE PERIODOS
+          </p>
+      </div  >
+      <button   class="bg-blue-500 mx-30 mb-16 sm:bg-orange-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Crear </button>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200">
+          <thead>
+            <tr>
+              <th class="px-4 py-2 border-b border-gray-200">Nombre</th>
+              <th class="px-4 py-2 border-b border-gray-200">Inicio </th>
+              <th class="px-4 py-2 border-b border-gray-200">Fin </th>
+              <th class="px-4 py-2 border-b border-gray-200"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border-b border-gray-200">Matemáticas</td>
+              <td class="px-4 py-2 border-b border-gray-200">01/09/2024</td>
+              <td class="px-4 py-2 border-b border-gray-200">30/11/2024</td>
+              <td class="px-4 py-2 border-b border-gray-200">
+                <button class="bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-700">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b border-gray-200">Física</td>
+              <td class="px-4 py-2 border-b border-gray-200">01/09/2024</td>
+              <td class="px-4 py-2 border-b border-gray-200">30/11/2024</td>
+              <td class="px-4 py-2 border-b border-gray-200">
+                <button class="bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-700">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b border-gray-200">Química</td>
+              <td class="px-4 py-2 border-b border-gray-200">01/09/2024</td>
+              <td class="px-4 py-2 border-b border-gray-200">30/11/2024</td>
+              <td class="px-4 py-2 border-b border-gray-200">
+                <button class="bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-700">Editar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleCodigo() {
+    const tipoDocumento = document.getElementById('tipo_documento').value;
+    const codigoDiv = document.getElementById('codigo_div');
+    if (tipoDocumento === 'dni' || tipoDocumento === 'carnet_extranjeria') {
+      codigoDiv.classList.remove('hidden');
+    } else {
+      codigoDiv.classList.add('hidden');
+    }
+  }
+</script>
